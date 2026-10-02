@@ -1,0 +1,192 @@
+{
+  "style": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading",
+  "palette": [
+    "#171A22",
+    "#1E222C",
+    "#0E1016",
+    "#F5C442",
+    "#E94B3D",
+    "#37B8CC",
+    "#7AC84F",
+    "#FFF1D6",
+    "#A89C84",
+    "#8A6A14"
+  ],
+  "notes": "One art style for the whole project, repeated word for word at the head of every prompt (rule F.1c); no prompt carries a photographic cue. Every mechanical sprite declares its orientation in words (rule C.8) and all of them except sprite_icon_back are explicitly horizontally symmetric, so a mirrored generation can never break the mechanic - the code never uses flipX. Backgrounds are cut away by the pipeline for every sprite (rule F.1b), so no prompt argues about backdrop colour. sprite_road_tile, sprite_verge and sprite_lane_stripe are stacked vertically in a scrolling ring, so their prompts describe their TOP and BOTTOM edges rather than their geometry (rule F.1d) and their .meta carries a 9-slice border. The four crate colours each carry a different seal shape, so the delivery order stays readable on a compressed screenshot and without colour vision. No prompt contains the app name and no sprite carries lettering of any kind (hard rule 1) - the splash mark is an abstract hexagonal badge.",
+  "assets": [
+    {
+      "name": "bg_main",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_main.png",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a night farm highway seen from above and behind, three dark asphalt lanes running away from the viewer and converging high in the distance, tall golden roadside lamps along both verges, dark ploughed fields and low hedges either side, near-black charcoal asphalt with warm gold light pools, the middle of the frame kept calm and low contrast as a safe area for a hero object and a button, the lower third darkened so controls read over it, vertical 9:19.5 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "bg_game",
+      "type": "bg",
+      "transparent": false,
+      "target": "Assets/Art/Textures/_BASE/Backgrounds/BG_game.png",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a night farm highway running the full height of the frame, very low contrast, soft dark fields and far hills, a faint gold horizon glow at the top, a soft vignette in the corners, the whole centre deliberately quiet and almost empty so gameplay pieces read on top of it, the top quarter and the bottom sixth darkened so a HUD stays legible, vertical 9:19.5 portrait composition, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_hero_cart",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hero_cart.png",
+      "orientation": "three-quarter view from behind and slightly above, nose pointing UP the screen away from the camera, horizontally symmetric so it is never mirrored",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single wooden delivery cart with a cheerful chicken courier riding it, seen from behind and slightly above with its nose pointing away up the screen, flat wooden bed with gold trim, chunky wheels on a short axle, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_gold",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_gold.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single wooden supply crate seen straight from the front, bright gold painted lid, a large round seal stamped in the middle of the lid, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_red",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_red.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single wooden supply crate seen straight from the front, bright warm red painted lid, a large triangular seal stamped in the middle of the lid, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_teal",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_teal.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single wooden supply crate seen straight from the front, bright turquoise painted lid, a large square seal stamped in the middle of the lid, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_crate_green",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_crate_green.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single wooden supply crate seen straight from the front, bright leaf green painted lid, a large star seal stamped in the middle of the lid, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_hay_bale",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_hay_bale.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single round hay bale lying across the road, warm straw tones with coiled rope bindings, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_milk_churns",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_milk_churns.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single pair of tall metal milk churns standing side by side on the road, cold steel bodies with gold rims and handles, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_road_tile",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_road_tile.png",
+      "orientation": "stacked vertically in a scrolling ring, so the TOP edge and the BOTTOM edge are both flat and identical and butt seamlessly against a copy of itself",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a wide asphalt road surface segment, near-black charcoal tarmac with a subtle grain and a few faint patches, a flat straight top edge and a flat straight bottom edge that are identical so copies stack seamlessly, a plain uniform band along each side so the piece survives horizontal stretching, no markings painted on it, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_verge",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_verge.png",
+      "orientation": "stacked vertically along the road edge, so the TOP edge and the BOTTOM edge are both flat and identical and butt seamlessly against a copy of itself",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a narrow tall strip of dark grass verge beside a road, deep night green field texture with a bright gold kerb line running down one long side, a flat straight top edge and a flat straight bottom edge that are identical so copies stack seamlessly, a plain uniform band along each side so the piece survives stretching, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_lane_stripe",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_lane_stripe.png",
+      "orientation": "repeated vertically between lanes, so the TOP end and the BOTTOM end are identical rounded caps, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single short vertical road marking dash, warm cream paint with softly rounded identical ends, slight wear along the edges, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_pickup_burst",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_pickup_burst.png",
+      "orientation": "radially symmetric, no preferred direction",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single bright starburst flash, gold rays radiating evenly in every direction from a pale hot centre, radially symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_strike_mark",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_strike_mark.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single small cracked crate marker used as a damage pip, a square crate silhouette split by a bold jagged crack down the middle, heavy dark contour, flat single colour fill so it can be tinted, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_mark_crate",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_mark_crate.png",
+      "orientation": "flat badge seen straight on, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single abstract gold hexagonal emblem with three parallel horizontal bars inside it, a flat heraldic badge, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_close",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_close.png",
+      "orientation": "flat icon seen straight on, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single bold X cross icon made of two thick gold strokes with rounded ends, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_back",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_back.png",
+      "orientation": "points LEFT, the only asymmetric sprite in the project and it is never mirrored in code",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single bold chevron arrow icon pointing to the LEFT, one thick gold stroke with rounded ends, heavy dark contour, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_icon_pause",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_icon_pause.png",
+      "orientation": "flat icon seen straight on, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single pause icon made of two thick vertical gold bars with rounded ends standing side by side, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_lock",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_lock.png",
+      "orientation": "straight front view, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, one single closed padlock icon, muted steel body with a gold shackle, heavy dark contour, horizontally symmetric, centred, whole subject in frame, isolated single subject, no other objects, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_lanes",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_lanes.png",
+      "orientation": "flat diagram seen from above, horizontally symmetric",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a simple flat instructional diagram of three dark road lanes seen from directly above with a small cart standing in the middle lane, one gold arrow pointing left and one matching gold arrow pointing right on either side of the cart, horizontally symmetric, centred, whole subject in frame, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_queue",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_queue.png",
+      "orientation": "flat diagram seen straight on, read left to right",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a simple flat instructional diagram showing a row of three rounded colour chips in a line, the leftmost chip sitting inside a thick gold ring to mark it as next, the other two plain, centred, whole subject in frame, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    },
+    {
+      "name": "sprite_tut_strikes",
+      "type": "sprite",
+      "transparent": true,
+      "target": "Assets/Art/Sprites/sprite_tut_strikes.png",
+      "orientation": "flat diagram seen straight on, read left to right",
+      "prompt": "chunky casual mobile cartoon, thick dark outline, flat bold shapes, high-contrast saturated colours, clean vector shading, a simple flat instructional diagram showing a row of three cracked crate markers in a line, the first one bright warm red and the other two greyed out and dim, centred, whole subject in frame, no text, no letters, no logos, no watermark, not a photo, not photorealistic"
+    }
+  ]
+}

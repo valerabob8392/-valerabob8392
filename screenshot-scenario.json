@@ -1,0 +1,12 @@
+{
+  "notes": "tapFrac is normalised SCREEN space measured from the TOP-LEFT. The UI taps are computed from the real RectTransforms over the 1242x2688 canvas reference: SafeArea fills the capture screen, but its child AspecterSA is an AspectRatioFitter in FitInParent mode at 1242/2688 = 0.46205357 while the Unity AVD is 1080x2400 = 0.45, so the UI layer renders 1080 x 2337.4 and is letterboxed 31.3 px top and bottom (x is NOT letterboxed). A UI rect sitting at fraction u of the panel measured from the bottom therefore lands at 0.013039 + u * 0.973917 of the screen from the bottom, so tapFrac y = 0.986961 - 0.973917 * u. ROUTES u=0.158, ROUTES_CLOSE u=0.9 at x=0.9, PLAY u=0.26 (the rule G.3 point anchor, 760x168), PAUSE is the HUD button at anchor (1,1) offset (-96,-120) in a 1242x2688 panel, i.e. x=(1242-96)/1242=0.9227 and u=1-120/2688=0.95536. The two LANE steps are world/screen taps read straight off Screen.width thirds by CartPilot, so they need no letterbox correction and only have to stay below the top 12% HUD guard. Route 1 runs a 75 s clock that is topped up by every delivered crate and nothing can hit a still player, so both gameplay frames (about 10 s and 24 s into the run) land on a live road with the queue, the cart, the crates, the strike gutter and the gesture hint on screen; the run is then paused for a deterministic result-card frame instead of waiting on a random finish.",
+  "steps": [
+    { "waitLoader": true, "wait": 3, "shot": "01_MenuScreen" },
+    { "tapFrac": [0.500, 0.8331], "label": "ROUTES", "wait": 1.8, "shot": "02_RoutesSheet" },
+    { "tapFrac": [0.900, 0.1104], "label": "ROUTES_CLOSE", "wait": 1.0 },
+    { "tapFrac": [0.500, 0.7337], "label": "PLAY", "waitLoader": true, "wait": 10, "shot": "03_GameScreen_start" },
+    { "tapFrac": [0.220, 0.5500], "label": "LANE_LEFT", "wait": 7, "shot": "04_GameScreen_lane" },
+    { "tapFrac": [0.800, 0.5500], "label": "LANE_RIGHT", "wait": 7, "shot": "05_GameScreen_running" },
+    { "tapFrac": [0.9227, 0.0565], "label": "PAUSE", "wait": 2.2, "shot": "06_PausePop" }
+  ]
+}
